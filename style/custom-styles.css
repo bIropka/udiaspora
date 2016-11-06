@@ -125,6 +125,7 @@ header[role='banner'] {
 .soc-icons {
     display: inline-block;
     margin-top: 10px;
+    margin-left: 15px;
 }
 
 .be-popup-sign-button {
@@ -164,6 +165,7 @@ header[role='banner'] {
     display: block;
     height: 45px;
 }
+
 .large-popup textarea.input-signtype {
     display: block;
     height: 100px;
@@ -171,11 +173,66 @@ header[role='banner'] {
 select::-ms-expand {
     display: none;
 }
-
-.select-hidden {
+.large-popup .select-wrapper {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+.large-popup .be-custom-select-wrap {
+    display: block;
+    width: 50%;
+    float: left;
+}
+.large-popup .select-country {
+    padding-right: 15px;
+}
+.large-popup .select-city {
+    visibility: hidden;
+    padding-left: 15px;
+}
+.large-popup .chosen-container-single .chosen-single {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #ffffff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+}
+.large-popup .chosen-container-single .chosen-single span {
+    font-family: 'Conv_helveticaneuecyr-roman', sans-serif;
+    color: #b4b7c1;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 7px;
+    height: 45px;
+    line-height: 45px;
+}
+.chosen-container .chosen-results li.group-result {
+    position: relative;
+    margin-top: 10px;
+}
+.chosen-container .chosen-results li.group-result:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #0d58c8;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+}
+.chosen-container .chosen-results li.disabled-result {
     display: none;
 }
-
+.chosen-container-single .chosen-single div b {
+    background: url('../img/chosen-sprite.png') no-repeat 2px 15px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -16px 15px
+}
 
 
 
@@ -245,8 +302,7 @@ footer[role='contentinfo'] a:hover {
 
 #map-italy ul li a {
     display: inline-block;
-    margin: 0 0 0 -30px!important;
-    min-width: 8px;
+    margin: 0 0 0 0!important;
     text-align: center;
     background: transparent;
     font-size: 14px!important;
@@ -254,17 +310,21 @@ footer[role='contentinfo'] a:hover {
     font-weight: 100;
     font-family: "AvenirNextCyrBold", sans-serif;
     position: relative;
+    padding: 0;
+}
+#map-italy ul li a.not-empty {
+    min-width: 25px;
 }
 #map-italy ul li a:before {
     content: '';
     display: block;
-    width: 90%;
-    padding-top: 120%;
+    width: 150%;
+    padding-top: 200%;
     position: absolute;
-    left: 5%;
-    top: -10px;
+    left: -25%;
+    top: -75%;
     background: url('../img/map-tooltip.png') no-repeat top;
-    background-size: cover;
+    background-size: contain;
     z-index: 0;
 }
 
@@ -445,6 +505,15 @@ footer[role='contentinfo'] a:hover {
         left: 0;
         right: 0;
         margin: auto;
+    }
+    .large-popup .be-custom-select-wrap {
+        display: block;
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .large-popup .select-city {
+        margin-top: 20px;
     }
 }
 

@@ -53,8 +53,14 @@ $(document).ready(function () {
         $('.nav-lang').slideToggle(200);
     });
 
-    $('.select-main').on('change', function() {
-        $(this).parents('.select-wrapper').find('.select-hidden').fadeIn();
+    $('.be-custom-select').chosen({
+        no_results_text: "Такої країни немає",
+        width: "100%",
+
+    });
+
+    $('.select-country').on('change', function() {
+        $(this).parents('.select-wrapper').find('.select-city').css('visibility', 'visible');
     });
 
     /*******************************************************************************************************************

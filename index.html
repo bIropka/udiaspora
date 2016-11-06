@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="style/font-awesome.min.css">
     <link rel="stylesheet" href="style/loader.css">
     <link rel="stylesheet" href="style/stylesheet.css">
-    <link rel="stylesheet" href="style/cssmap-poland.css"  media="screen">
+    <link rel="stylesheet" href="style/chosen.min.css">
+    <link rel="stylesheet" href="style/cssmap-italy.css"  media="screen">
     <link rel="stylesheet" href="style/cssmap-themes.css"  media="screen">
     <link rel="stylesheet" href="style/custom-styles.css">
 
@@ -93,23 +94,28 @@
 
         <div class="hidden-xs hidden-sm map-wrapper">
             <div id="map-italy">
-                <ul class="poland">
-                    <li class="pl1"><a href="#dolnoslaskie">5609</a></li>
-                    <li class="pl2"><a href="#kujawsko-pomorskie">2108</a></li>
-                    <li class="pl3"><a href="#lubelskie">56</a></li>
-                    <li class="pl4"><a href="#lubuskie">6543</a></li>
-                    <li class="pl5"><a href="#lodzkie">4354</a></li>
-                    <li class="pl6"><a href="#malopolskie">4545</a></li>
-                    <li class="pl7"><a href="#mazowieckie">3684</a></li>
-                    <li class="pl8"><a href="#opolskie">878</a></li>
-                    <li class="pl9"><a href="#podkarpackie">85</a></li>
-                    <li class="pl10"><a href="#podlaskie">5685</a></li>
-                    <li class="pl11"><a href="#pomorskie">1212</a></li>
-                    <li class="pl12"><a href="#slaskie">1312</a></li>
-                    <li class="pl13"><a href="#swietokrzyskie">8088</a></li>
-                    <li class="pl14"><a href="#warminsko-mazurskie">6767</a></li>
-                    <li class="pl15"><a href="#wielkopolskie">676</a></li>
-                    <li class="pl16"><a href="#zachodniopomorskie">787</a></li>
+                <ul class="italy">
+                    <li class="it1"><a href="#abruzzo"></a></li>
+                    <li class="it2"><a href="#basilicata"></a></li>
+                    <li class="it3"><a href="#calabria"></a></li>
+                    <li class="it4"><a href="#campania"></a></li>
+                    <li class="it5"><a href="#emilia-romagna"></a></li>
+                    <li class="it6"><a href="#friuli-venezia-giulia"></a></li>
+                    <li class="it7"><a href="#lazio"></a></li>
+                    <li class="it8"><a href="#liguria"></a></li>
+                    <li class="it9"><a href="#lombardia"></a></li>
+                    <li class="it10"><a href="#marche"></a></li>
+                    <li class="it11"><a href="#molise"></a></li>
+                    <li class="it12"><a href="#piemonte" class="not-empty">10</a></li>
+                    <li class="it13"><a href="#puglia"></a></li>
+                    <li class="it14"><a href="#sardegna"></a></li>
+                    <li class="it15"><a href="#sicilia"></a></li>
+                    <li class="it16"><a href="#toscana" class="not-empty">4596</a></li>
+                    <li class="it17"><a href="#trentino-alto-adige"></a></li>
+                    <li class="it18"><a href="#umbria"></a></li>
+                    <li class="it19"><a href="#valle-d-aosta"></a></li>
+                    <li class="it20"><a href="#veneto" class="not-empty">399</a></li>
+                    <li class="it21"><a href="#san-marino"></a></li>
                 </ul>
             </div>
         </div>
@@ -269,38 +275,37 @@
                             <div class="col-md-12">
                                 <input class="input-signtype" type="text" required="" placeholder="Прізвище">
                             </div>
-                            <div class="col-md-6 select-wrapper">
-                                <div class="be-custom-select-block">
-                                    <select class="be-custom-select select-main">
+                            <div class="col-md-12 select-wrapper">
+                                <label class="be-custom-select-wrap select-country">
+                                    <select class="be-custom-select">
                                         <option value="" disabled selected>Країна</option>
                                         <option value="">Італія</option>
                                         <option value="">Україна</option>
-                                        <option value="">Росія</option>
-                                        <option value="">Англія</option>
-                                        <option value="">Франція</option>
-                                        <option value="">Зімбабве</option>
-                                        <option value="">Іспанія</option>
-                                        <option value="">Португалія</option>
-                                        <option value="">Чехія</option>
-                                        <option value="">Угорщина</option>
-                                        <option value="">Німеччина</option>
+                                        <optgroup label="Другие страны">
+                                            <option value="">Росія</option>
+                                            <option value="">Англія</option>
+                                            <option value="">Франція</option>
+                                            <option value="">Зімбабве</option>
+                                            <option value="">Іспанія</option>
+                                            <option value="">Португалія</option>
+                                            <option value="">Чехія</option>
+                                            <option value="">Угорщина</option>
+                                            <option value="">Німеччина</option>
+                                        </optgroup>
                                     </select>
-                                </div>
-                                <div class="be-custom-select-block select-hidden">
+                                </label>
+                                <label class="be-custom-select-wrap select-city">
                                     <select class="be-custom-select">
                                         <option value="" disabled selected>Выберите город</option>
-                                        <option value="">Город 1</option>
-                                        <option value="">Город 2</option>
-                                        <option value="">Город 3</option>
-                                        <option value="">Город 4</option>
-                                        <option value="">Город 5</option>
+                                        <option value="">Рим</option>
+                                        <option value="">Флоренция</option>
+                                        <option value="">Венеция</option>
+                                        <option value="">Милан</option>
+                                        <option value="">Палермо</option>
                                     </select>
-                                </div>
+                                </label>
                             </div>
-                            <div class="col-md-6">
-                                <input class="input-signtype" id="city" type="text" required="" placeholder="Місто" style="display:none;">
-                            </div>
-                            <div class="col-md-6 col-md-offset-6 for-signin">
+                            <div class="col-md-6 col-md-offset-6">
                                 <input type="submit" class="be-popup-sign-button" value="Зареєструватися">
                             </div>
                         </form>
@@ -312,6 +317,7 @@
 
     <script src="script/jquery-2.1.4.min.js"></script>
     <script src="script/jquery.cssmap.min.js"></script>
+    <script src="script/chosen.jquery.min.js"></script>
     <script src="script/custom-scripts.js"></script>
 </body>
 </html>
