@@ -65,5 +65,16 @@ $(document).ready(function () {
         $(".be-loader").fadeOut("slow");
     });
 
+    /*******************************************************************************************************************
+     * map
+     */
+
+    $("#map-italy").CSSMap({
+        "size": 430,
+        "tooltips": "visible",
+        "responsive": "auto",
+        disableClicks: true
+    });
+
 
 });

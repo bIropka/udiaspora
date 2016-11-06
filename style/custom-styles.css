@@ -15,11 +15,7 @@
 ***********************************************************************************************************************/
 header[role='banner'] {
     display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 100;
+    position: relative;
 }
 .logo-header {
     display: block;
@@ -97,7 +93,7 @@ header[role='banner'] {
 ***********************************************************************************************************************/
 
 .large-popup {
-    height: 100%;
+    height: calc(100% - 70px);
     overflow: auto;
     top: -100%;
     display: block;
@@ -110,6 +106,7 @@ header[role='banner'] {
 }
 .large-popup-container {
     height: 100%;
+    padding-top: 30px;
     padding-bottom: 30px;
     overflow: auto;
 }
@@ -230,17 +227,45 @@ footer[role='contentinfo'] a:hover {
     background-size: cover;
     display: block;
     position: relative;
+    margin-top: 0;
 }
 
 .map-wrapper {
     display: block;
     width: 450px;
+    height: 530px;
     position: absolute;
     top: calc(50% - 265px);
     right: 51%;
+    overflow: hidden;
 }
 .map-wrapper img {
     width: 100%;
+}
+
+#map-italy ul li a {
+    display: inline-block;
+    margin: 0 0 0 -30px!important;
+    min-width: 8px;
+    text-align: center;
+    background: transparent;
+    font-size: 14px!important;
+    color: #000000;
+    font-weight: 100;
+    font-family: "AvenirNextCyrBold", sans-serif;
+    position: relative;
+}
+#map-italy ul li a:before {
+    content: '';
+    display: block;
+    width: 90%;
+    padding-top: 120%;
+    position: absolute;
+    left: 5%;
+    top: -10px;
+    background: url('../img/map-tooltip.png') no-repeat top;
+    background-size: cover;
+    z-index: 0;
 }
 
 .main-content {
@@ -513,11 +538,11 @@ footer[role='contentinfo'] a:hover {
         padding-left: 35px;
     }
     .nav-lang li .lang-mobile:before {
-        -webkit-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
     }
     .lang-ua:before {
         content: '';
@@ -530,9 +555,9 @@ footer[role='contentinfo'] a:hover {
         bottom: 0;
         left: 10px;
         background: linear-gradient(to bottom, #4173cd 0, #4173cd 50%, #ffe15a 50%);
-        -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
     }
     .lang-ru:before {
         content: '';
@@ -545,9 +570,9 @@ footer[role='contentinfo'] a:hover {
         bottom: 0;
         left: 10px;
         background: linear-gradient(to right, #ffffff 0, #ffffff 33.3333333%, #2525f5 33.3333333%, #2525f5 66.6666666%, #ff4b55 66.6666666%);
-        -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
     }
     .lang-it:before {
         content: '';
@@ -560,9 +585,9 @@ footer[role='contentinfo'] a:hover {
         bottom: 0;
         left: 10px;
         background: linear-gradient(to right, #73af00 0, #73af00 33.3333333%, #f5f5f5 33.3333333%, #f5f5f5 66.6666666%, #ff4b55 66.6666666%);
-        -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
-        box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.25);
     }
     .nav-lang li .lang-mobile:hover {
         background: #f5f5f5;
@@ -574,7 +599,7 @@ footer[role='contentinfo'] a:hover {
     .large-popup-content {
         display: block;
         width: 100%;
-        max-width: 450px;
+        max-width: 350px;
         margin-left: auto;
         margin-right: auto;
         float: none;
@@ -583,6 +608,15 @@ footer[role='contentinfo'] a:hover {
 }
 
 @media (max-width: 492px) {
+
+    .footer-bottom .btn {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
 
     .main-content .btn {
         display: block;
@@ -599,11 +633,6 @@ footer[role='contentinfo'] a:hover {
         width: 100%;
     }
 
-}
-
-
-@media (max-width: 400px) {
-
     .logo-header {
         width: 120px;
         margin: 21px 0 0 0;
@@ -617,6 +646,19 @@ footer[role='contentinfo'] a:hover {
         float: right;
         position: relative;
         right: -15px;
+    }
+
+    .footer-bottom .btn {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    html, body {
+        width: 320px;
+        overflow: auto;
     }
 
 }
