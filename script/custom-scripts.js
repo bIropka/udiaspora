@@ -36,7 +36,7 @@ $(document).ready(function () {
     });
 
     $('.select-country').on('change', function() {
-        $(this).parents('.select-wrapper').find('.select-city').css('visibility', 'visible');
+        $(this).parents('.select-wrapper').find('.select-city').css({'visibility': 'visible', 'position': 'static'});
     });
 
     /*******************************************************************************************************************
