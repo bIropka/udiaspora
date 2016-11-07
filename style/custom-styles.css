@@ -611,8 +611,8 @@ footer[role='contentinfo'] a:hover {
     }
 
     .main-content {
-        position: static;
-        margin: 0;
+        top: 10%;
+        bottom: auto;
     }
 
     .footer-bottom {
@@ -635,8 +635,8 @@ footer[role='contentinfo'] a:hover {
     }
 
     .logo-header {
-        width: 160px;
-        margin: 15px 0 0 0;
+        width: 155px;
+        margin: 20px 0 0 0;
     }
 
     .header-flags {
@@ -782,11 +782,15 @@ footer[role='contentinfo'] a:hover {
         width: 12px;
         height: 8px;
     }
+    .main-content {
+        position: static;
+        margin-top: 20px;
+    }
 
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
 
     .main-content .btn {
         display: block;
@@ -804,12 +808,12 @@ footer[role='contentinfo'] a:hover {
     }
 
     .logo-header {
-        width: 130px;
-        margin: 18px 0 0 0;
+        width: 125px;
+        margin: 25px 0 0 0;
     }
 
     .header-flags {
-        right: -25px;
+        right: -35px;
     }
 
     .footer-bottom .btn {
