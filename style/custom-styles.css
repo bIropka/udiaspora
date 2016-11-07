@@ -834,3 +834,10 @@ footer[role='contentinfo'] a:hover {
     }
 
 }
+
+@media (max-device-width : 980px) and (orientation : landscape) {
+    .main-content {
+        position: static;
+        margin-top: 20px;
+    }
+}
