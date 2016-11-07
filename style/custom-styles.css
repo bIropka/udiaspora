@@ -1,18 +1,6 @@
 /***********************************************************************************************************************
 **************************** GENERAL
 ***********************************************************************************************************************/
-@font-face {
-    font-family: 'HelveticaBQ-Bold';
-    src: url("../fonts/HelveticaBQ-Bold.otf") format("opentype"), url("../fonts/HelveticaBQ-Bold.woff") format("woff"), url("../fonts/HelveticaBQ-Bold.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Calibri';
-    src: url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-}
 .btn, .btn:hover, .btn:active {
     outline: none!important;
 }
@@ -26,7 +14,6 @@
 }
 .loader-logo {
     width: 250px;
-    margin-bottom: -15px;
 }
 
 /***********************************************************************************************************************
@@ -38,11 +25,10 @@ header[role='banner'] {
 }
 .logo-header {
     display: block;
-    width: 235px;
-    height: 64px;
-    margin: 6px 0 0;
+    width: 220px;
+    margin: 12px 0 0;
 }
-.logo-header img, .icon-flag img {
+.logo-header img, .loader-logo img {
     width: 100%;
 }
 
@@ -650,7 +636,6 @@ footer[role='contentinfo'] a:hover {
 
     .logo-header {
         width: 160px;
-        height: 44px;
         margin: 15px 0 0 0;
     }
 
@@ -832,8 +817,7 @@ footer[role='contentinfo'] a:hover {
     }
     .logo-header {
         width: 130px;
-        height: 35px;
-        margin-top: 20x;
+        margin-top: 20px;
     }
 
 }
