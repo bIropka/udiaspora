@@ -304,16 +304,41 @@ footer[role='contentinfo'] a:hover {
     display: inline-block;
     margin: 0 0 0 0!important;
     text-align: center;
-    background: transparent;
+    background: #ffffff;
     font-size: 14px!important;
     color: #000000;
     font-weight: 100;
     font-family: "AvenirNextCyrBold", sans-serif;
-    position: relative;
     padding: 0;
 }
-#map-italy ul li a.not-empty {
-    min-width: 25px;
+#map-italy ul li .not-empty {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 3px solid #4690fd;
+    -webkit-box-shadow: 0 0 0 2px #ffffff;
+    -moz-box-shadow: 0 0 0 2px #ffffff;
+    box-shadow: 0 0 1px 2px #ffffff;
+}
+#map-italy ul li .digits-2 {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+#map-italy ul li .digits-3 {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+#map-italy ul li .digits-4 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+#map-italy ul li .digits-5 {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
 }
 #map-italy ul li a:before {
     content: '';
@@ -321,11 +346,11 @@ footer[role='contentinfo'] a:hover {
     width: 150%;
     padding-top: 200%;
     position: absolute;
-    left: -25%;
-    top: -75%;
-    background: url('../img/map-tooltip.png') no-repeat top;
-    background-size: contain;
-    z-index: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }
 
 .main-content {
