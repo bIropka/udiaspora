@@ -1,6 +1,12 @@
 /***********************************************************************************************************************
 **************************** GENERAL
 ***********************************************************************************************************************/
+@font-face {
+    font-family: 'HelveticaBQ-Bold';
+    src: url("../fonts/HelveticaBQ-Bold.otf") format("opentype"), url("../fonts/HelveticaBQ-Bold.woff") format("woff"), url("../fonts/HelveticaBQ-Bold.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
 .btn, .btn:hover, .btn:active {
     outline: none!important;
 }
@@ -11,6 +17,10 @@
     min-height: calc(100vh - 120px);
     margin-bottom: 0;
     overflow: hidden;
+}
+.loader-logo {
+    width: 250px;
+    margin-bottom: -15px;
 }
 
 /***********************************************************************************************************************
@@ -23,7 +33,7 @@ header[role='banner'] {
 .logo-header {
     display: block;
     width: 235px;
-    margin: 8px 0 9px;
+    margin: 3px 0;
 }
 .logo-header img, .icon-flag img {
     width: 100%;
@@ -113,10 +123,14 @@ header[role='banner'] {
     padding-bottom: 30px;
     overflow: auto;
 }
+.large-popup-content {
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .large-popup.visible {
     top: 70px;
 }
-
 .close-button {
     right: 14px;
 }
@@ -124,11 +138,16 @@ header[role='banner'] {
 .large-popup-title {
     padding-left: 0;
 }
-
+.soc-icons-title {
+    padding-right: 15px;
+}
 .soc-icons {
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.password-btn {
+    margin-bottom: 10px;
 }
 
 .be-popup-sign-button {
@@ -146,7 +165,7 @@ header[role='banner'] {
 }
 
 .be-register {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .be-popup-sign-button {
@@ -543,6 +562,12 @@ footer[role='contentinfo'] a:hover {
     .large-popup .select-city {
         margin-top: 20px;
     }
+    .large-popup-content {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 767px) {
@@ -578,8 +603,8 @@ footer[role='contentinfo'] a:hover {
     }
 
     .logo-header {
-        width: 140px;
-        margin: 19px 0 0 0;
+        width: 160px;
+        margin: 12px 0 0 0;
     }
 
     .header-flags {
@@ -596,9 +621,9 @@ footer[role='contentinfo'] a:hover {
         float: right;
         background: #afbdc6;
         text-align: left;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
         padding-left: 35px;
         position: relative;
         color: #333333;
@@ -607,9 +632,9 @@ footer[role='contentinfo'] a:hover {
     .nav-lang {
         display: none;
         width: 74px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
         padding: 5px 0;
         position: absolute;
         right: 15px;
@@ -693,21 +718,37 @@ footer[role='contentinfo'] a:hover {
         left: 15px;
     }
 
-    .large-popup-content {
-        display: block;
-        width: 100%;
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-    }
-
 }
 
 @media (max-width: 492px) {
 
     .footer-bottom .btn {
         font-size: 12px;
+    }
+    .current-lang {
+        width: 60px;
+        height: 30px;
+        margin-top: 20px;
+        line-height: 30px;
+    }
+    .nav-lang {
+        width: 60px;
+    }
+    .current-lang, .nav-lang li .lang-mobile {
+        font-size: 12px;
+        padding-left: 30px;
+    }
+    .lang-ua:before {
+        width: 12px;
+        height: 8px;
+    }
+    .lang-ru:before {
+        width: 12px;
+        height: 8px;
+    }
+    .lang-it:before {
+        width: 12px;
+        height: 8px;
     }
 
 }
@@ -732,7 +773,7 @@ footer[role='contentinfo'] a:hover {
 
     .logo-header {
         width: 120px;
-        margin: 21px 0 0 0;
+        margin: 18px 0 0 0;
     }
 
     .header-flags {
