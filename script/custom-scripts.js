@@ -1,27 +1,4 @@
-$(document).ready(function () {
-
-    /*******************************************************************************************************************
-     * window resize
-     */
-
-    if ($(window).width() < '992'){
-        
-    } else {
-
-    }
-
-    $(window).resize(function(){
-        if ($(window).width() < '992'){
-
-        } else {
-
-        }
-    });
-
-    /*******************************************************************************************************************
-     * buttons, clicks, hovers
-     */
-    
+$(document).ready(function () {    
 
     /*******************************************************************************************************************
      * buttons, clicks, hovers
@@ -56,7 +33,6 @@ $(document).ready(function () {
     $('.be-custom-select').chosen({
         no_results_text: "Такої країни немає",
         width: "100%",
-
     });
 
     $('.select-country').on('change', function() {
@@ -64,7 +40,7 @@ $(document).ready(function () {
     });
 
     /*******************************************************************************************************************
-     * function on page load
+     * loader
      */
 
     $(window).load(function(){
@@ -76,9 +52,9 @@ $(document).ready(function () {
      */
 
     $("#map-italy").CSSMap({
-        "size": 430,
-        "tooltips": "visible",
-        "responsive": "auto",
+        size: 430,
+        tooltips: "visible",
+        responsive: "auto",
         disableClicks: true
     });
 
